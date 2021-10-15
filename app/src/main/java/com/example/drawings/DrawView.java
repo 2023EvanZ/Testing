@@ -24,6 +24,9 @@ public class DrawView extends View { //10:19
         canvas.drawCircle(100, y, (float) 105,  p);
         canvas.drawCircle(400, 200, (float) 105,  new Paint());
         y+=dY;
+        if (y <= 0) {
+            y = getHeight() - 1;
+        }
         y%=getHeight();
         invalidate();
     }
